@@ -33,9 +33,18 @@ To launch docker image for training transformer model run
 docker run bajkogenerator:latest train_transformer
 ```
 
+To train models with dataset mounted add `-v {path_to_dataset}:/dataset` to docker run command.
+
 Example how to run docker image for training transformer model with dataset mounted:
 ```
-docker run -v {path_to_dataset}:/dataset bajkogenerator:latest train_transformer --train-data-path /dataset
+docker run -v {path_to_dataset}:/app/dataset bajkogenerator:latest train_transformer --train-data-path /dataset
+```
+
+To use GPU in docker container add `--gpus all` to docker run command.
+
+Example how to run inference docker image with GPU:
+```
+docker run --gpus all -p 7860:7860 -v {path_to_weights}:/app/weights bajkogenerator:latest gradio --transformer-model-path=/app/weights/{transformer_weights} --lstm-model-path /app/weights/{lstm_weights}
 ```
 
 ## Dataset
