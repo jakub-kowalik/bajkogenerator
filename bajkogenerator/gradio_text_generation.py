@@ -82,12 +82,12 @@ if __name__ == "__main__":
     parser.add_argument("--transformer-dropout", type=float, default=0.2)
 
     parser.add_argument("--vocab-size", type=int, default=tokenizer.vocab_size)
-    parser.add_argument("--lstm-embedding_size", type=int, default=300)
-    parser.add_argument("--lstm-layers", type=int, default=2)
+    parser.add_argument("--lstm-embedding_size", type=int, default=100)
+    parser.add_argument("--lstm-layers", type=int, default=3)
     parser.add_argument("--lstm-bidirectional", type=bool, default=True)
     parser.add_argument("--lstm-dropout", type=float, default=0.5)
-    parser.add_argument("--lstm-size", type=int, default=254)
-    parser.add_argument("--lstm-sequence_length", type=int, default=20)
+    parser.add_argument("--lstm-size", type=int, default=256)
+    parser.add_argument("--lstm-sequence_length", type=int, default=128)
 
     parser.add_argument("--gpu", action="store_false", help="Use GPU if available")
 
