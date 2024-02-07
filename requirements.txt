@@ -32,7 +32,7 @@ decorator==5.1.1
 deep-translator==1.11.4
 defusedxml==0.7.1
 executing==1.2.0
-fastapi==0.103.0
+fastapi==0.109.1
 fastjsonschema==2.18.0
 ffmpy==0.3.1
 filelock==3.12.2
